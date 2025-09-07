@@ -1,61 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> CLOTHING BRAND</title>
-  <link rel="stylesheet" href="https://cindysidibe841-jpg.github.io/cindy-css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog | Prime Fashion</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Menu -->
-    <!-- Navigation Menu -->
-   <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="royals.html">Royals</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </nav>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="royals.html">Royals</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </nav>
 
-    <!-- Header -->
-    <header>
-        Simple Clothing Brand
-    </header>
-	
+  <!-- Header -->
+  <header>
+    <h1>Prime Fashion</h1>
+    <p>Where Style Meets Confidence</p>
+  </header>
 
-    <!-- Banner -->
-    <div class="banner">
-        <img src="https://cdn.cookielaw.org/logos/5435e8e3-1f77-4efd-bb7e-591b5a6e876e/8af46fc4-b519-4b92-8251-e2f3d18d0f1e/a4929b0a-65c7-4ab3-b8a5-c5a76e88c8fd/Standard.png" alt="Banner Image">
+  <!-- Hero/Banner -->
+  <section class="hero" aria-hidden="true">
+    <img src="https://mediaslide-europe.storage.googleapis.com/supa/news_pictures/2023/01/large-1673518453-924800fce68f3a7fe23fa667342148d2.jpeg" alt="Fashion banner">
+    <div class="hero-text">Latest from Our Style Journal</div>
+  </section>
+
+  <!-- Intro -->
+  <div class="lead">
+    <h2>Latest from Our Style Journal</h2>
+    <p>
+      Fashion isn’t just about clothing — it’s about telling your story without saying a word. 
+      Here we share trends, styling tips, behind-the-scenes looks, and features from our collections.
+      Read on for outfit ideas, designer highlights, and runway inspiration.
+    </p>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search">
+      <input type="search" placeholder="Search posts, e.g. 'runway' or 'sustainability'">
     </div>
-<!-- Blog Section -->
-<section class="intro">
-    <h2 style="color:#e91e63; text-transform:uppercase; letter-spacing:1px;">Latest from Our Style Journal</h2>
-    <p>
-        Fashion isn’t just about clothing — it’s about telling your story without saying a word. 
-        Here on our blog, we share the latest trends, styling tips, and behind-the-scenes looks 
-        at our collections. From everyday essentials to statement pieces, we’ll help you 
-        elevate your wardrobe and embrace your personal style with confidence.
-    </p>
-    <p>
-        Whether you’re seeking outfit inspiration or curious about the craftsmanship behind our designs, 
-        this is your space to explore, learn, and connect with the world of fashion.  
-        Stay tuned for fresh updates every month!
-    </p>
-</section>
+    <div class="tagline">Showing 10 spotlight posts — updated monthly</div>
+  </div>
 
- 
+  <!-- Posts grid (10 posts) -->
+  <main class="posts" aria-live="polite">
+    <!-- 1 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?runway,couture" alt="Couture runway">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Runway • Mar 2025</div>
+        <div class="post-title">Couture Highlights: The Runway That Stole the Show</div>
+        <div class="post-excerpt">An inside look at the most talked-about couture looks and the designers redefining elegance this season.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">5 min read</div>
+        </div>
+      </div>
+    </article>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Simple Clothing Brand | Designed by Cindy
-    </footer>
+    <!-- 2 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?editorial,fashion" alt="Editorial shoot">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Editorial • Feb 2025</div>
+        <div class="post-title">The Art of the Editorial: Creating Mood & Story</div>
+        <div class="post-excerpt">How editorial shoots craft narratives — lighting, styling and the tiny details that tell a bigger story.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">6 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?street-style,fashion" alt="Street style">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Street • Jan 2025</div>
+        <div class="post-title">Street Style: Everyday Looks with High-End Flair</div>
+        <div class="post-excerpt">Top street-style edits you can wear anywhere — comfort, confidence and subtle luxury combined.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">4 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?vintage-fashion,retro" alt="Vintage fashion">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Heritage • Dec 2024</div>
+        <div class="post-title">Vintage Inspirations: Modern Takes on Classic Silhouettes</div>
+        <div class="post-excerpt">A celebration of archival pieces and how to style vintage shapes for modern everyday life.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">7 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?red-carpet,fashion" alt="Red carpet">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Glam • Nov 2024</div>
+        <div class="post-title">Red Carpet: How Celebrities Define Evening Style</div>
+        <div class="post-excerpt">The eveningwear trends that translate to special occasion wardrobes — and how to own them gracefully.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">5 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?designer,atelier" alt="Designer atelier">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Maker • Oct 2024</div>
+        <div class="post-title">Atelier Tour: Behind the Seams of a Bespoke Dress</div>
+        <div class="post-excerpt">Step behind the scenes with artisans who craft couture by hand — an ode to craftsmanship and patience.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">8 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?accessories,jewelry" alt="Accessories and jewelry">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Accessories • Sep 2024</div>
+        <div class="post-title">Accessories That Transform an Outfit</div>
+        <div class="post-excerpt">How to pick the right accessories — from fine jewellery to statement belts — and make them work for you.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">3 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?ball-gown,couture" alt="Ball gown">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Occasion • Aug 2024</div>
+        <div class="post-title">Ball Gowns & Formalwear: Choosing Timeless Pieces</div>
+        <div class="post-excerpt">Selecting formalwear that lasts — fabrics, fits and the little details that make a moment unforgettable.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">6 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?tailor,suit" alt="Tailored suit">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Tailoring • Jul 2024</div>
+        <div class="post-title">Perfect Fit: A Guide to Tailoring and Alterations</div>
+        <div class="post-excerpt">Why a good fit matters and the small tailoring tweaks that elevate a look from good to great.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">4 min read</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="post-card">
+      <div class="post-media">
+        <img src="https://source.unsplash.com/800x600/?fashion-portrait,model" alt="Fashion portrait">
+      </div>
+      <div class="post-body">
+        <div class="post-meta">Portrait • Jun 2024</div>
+        <div class="post-title">Portraits & Mood: The Power of Styling for Photography</div>
+        <div class="post-excerpt">Tips for styling for photoshoots and how styling choices shape the visual mood in campaigns.</div>
+        <div class="post-footer">
+          <a class="btn" href="#">Read more</a>
+          <div class="post-meta">5 min read</div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Pagination placeholder -->
+  <div class="pagination" aria-hidden="true">
+    <a href="#">&larr; Prev</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">Next &rarr;</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Prime Fashion. All Rights Reserved.
+  </footer>
 
 </body>
-
 </html>
-
-
-
