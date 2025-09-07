@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Clothing Brand - Contact</title>
-   <link rel="stylesheet" href="https://cindysidibe841-jpg.github.io/cindy-css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Prime Fashion</title>
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<div class="contact">
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="royals.html">Royals</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </nav>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="royals.html">Royals</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
 
-    <!-- Header -->
-    <header>
-        Simple Clothing Brand
-    </header>
+  <!-- Header -->
+  <header>
+    <h1>Prime Fashion</h1>
+    <p>Where Style Meets Confidence</p>
+  </header>
 
-    <!-- Contact Section -->
-    <h2>📬 Contact Us</h2>
-    <form action="#" method="post">
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="firstname" required>
+  <!-- Page container -->
+  <div class="page-wrap">
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phonenumber" required>
+    <!-- Glass panel containing the form + right-side info -->
+    <div class="contact-panel" role="region" aria-label="Contact panel">
+      <!-- LEFT: form -->
+      <div class="panel-left">
+        <div class="panel-head">
+          <h2>📬 Get in Touch</h2>
+          <p>Have a question about an order, collaboration or press? Send us a message and we'll reply within 1–2 business days.</p>
+        </div>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <form class="contact-form" action="#" method="post" autocomplete="on" novalidate>
+          <div class="row-2">
+            <div>
+              <label for="fname">First Name</label>
+              <input id="fname" name="firstname" type="text" placeholder="Your first name" required>
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phonenumber" type="text" placeholder="+254 7xx xxx xxx" required>
+            </div>
+          </div>
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
 
-        <button type="submit">Send Message</button>
-    </form>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help…" rows="6" required></textarea>
+          </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Simple Clothing Brand | Designed by Cindy
-    </footer>
+          <div class="actions">
+            <div class="note" aria-hidden="true">We respect your privacy — we'll never share your details.</div>
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: optional info / quick contact summary -->
+      <aside class="panel-right" aria-hidden="true">
+        <div style="background:transparent; color: #fff;">
+          <h3 style="margin:0 0 8px 0; color:#fff">How to reach us</h3>
+          <p style="margin:0 0 12px 0; color:rgba(255,255,255,0.92)">Email: <strong>hello@primefashion.example</strong></p>
+          <p style="margin:0 0 12px 0; color:rgba(255,255,255,0.92)">Phone: <strong>+254 712 345 678</strong></p>
+          <p style="margin:0 0 12px 0; color:rgba(255,255,255,0.9)">Working hours: Mon–Fri, 9:00 — 18:00</p>
+          <div style="margin-top:10px; border-top:1px solid rgba(255,255,255,0.06); padding-top:12px">
+            <p style="color:rgba(255,255,255,0.9); margin:0 0 6px 0">Follow us</p>
+            <div style="display:flex; gap:8px; margin-top:6px">
+              <!-- simple social placeholders -->
+              <a href="#" style="display:inline-block;padding:8px 12px;background:rgba(255,255,255,0.06);color:#fff;border-radius:8px;text-decoration:none">Instagram</a>
+              <a href="#" style="display:inline-block;padding:8px 12px;background:rgba(255,255,255,0.06);color:#fff;border-radius:8px;text-decoration:none">TikTok</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div> <!-- /.contact-panel -->
+
+  </div> <!-- /.page-wrap -->
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Prime Fashion. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
-
-
-
