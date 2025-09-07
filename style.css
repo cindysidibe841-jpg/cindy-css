@@ -1,252 +1,351 @@
+/* ===============================
+   Global Variables
+=============================== */
+:root {
+  --primary: #2a9d8f;    /* Teal */
+  --secondary: #264653;  /* Dark navy */
+  --light: #f5f5f5;
+  --text: #222;
+  --border: #ddd;
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.12);
+}
 
-        /* General Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #fafafa;
-            color: #333;
-            text-align: center;
-        }
+/* ===============================
+   Reset + Base
+=============================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-        /* Menu Bar - Fashion Style */
-        nav {
-            background-color: #fff;
-            border-bottom: 2px solid #f5f5f5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline-block;
-        }
-        nav ul li a {
-            display: block;
-            padding: 14px 22px;
-            color: #333;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-        nav ul li a:hover {
-            color: #e91e63;
-            border-bottom: 3px solid #e91e63;
-        }
-        nav ul li a.active {
-            color: #e91e63;
-            border-bottom: 3px solid #e91e63;
-        }
+/* ===============================
+   Navbar
+=============================== */
+nav {
+  background: var(--primary);
+  padding: 12px 8px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+nav a:hover { background: #fff; color: var(--primary); }
+nav a.active { background: rgba(255,255,255,0.15); }
 
-        /* Header */
-        header {
-            background-color: #fff;
-            color: #e91e63;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+/* ===============================
+   Header
+=============================== */
+header {
+  text-align: center;
+  padding: 28px 16px;
+  background: linear-gradient(180deg, var(--light) 0%, transparent 100%);
+}
+header h1 { font-size: 2rem; color: var(--secondary); margin: 0; }
+header p { margin-top: 8px; color: var(--primary); font-weight: 600; }
 
-        /* Banner */
-        .banner img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
+/* ===============================
+   Banner / Hero
+   - General hero banner rules apply to full-width banners
+   - Specific override for the Zara logo keeps homepage logo small
+=============================== */
+.banner, .hero { position: relative; text-align: center; color: #fff; }
+.banner img, .hero img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  filter: brightness(70%);
+  display: block;
+  border-bottom: 4px solid var(--primary);
+}
 
-        /* Intro Paragraph */
-        .intro {
-            max-width: 800px;
-            margin: 20px auto;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
+/* Keep the Zara logo size/placement exactly as in your original homepage */
+.banner img[alt="Zara Logo"] {
+  width: 250px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  object-fit: contain;
+  filter: none;
+  border-bottom: none;
+}
 
-        /* Product Table */
-        table {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: lightpink;
-            color: #7e1b1b;
-        }
+/* overlay helpers */
+.banner-text, .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+.banner-text h2, .hero-text { font-size: 2.2rem; font-weight: 700; }
+.banner-text p { font-size: 1.2rem; margin-bottom: 16px; }
 
-        /* Video Section */
-        .video-container {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: center;
-        }
-        video {
-            width: 100%;
-            border-radius: 8px;
-        }
+/* Buttons */
+.btn {
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn:hover { background: var(--secondary); transform: translateY(-2px); }
 
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-        }
-        .royals {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #fafafa;
-            color: #333;
-        }
+/* ===============================
+   Intro / Description
+=============================== */
+.intro, .description, .lead {
+  max-width: 960px;
+  margin: 18px auto;
+  padding: 0 16px;
+  text-align: center;
+  color: #444;
+}
+.intro h2, .lead h2 { color: var(--secondary); font-size: 1.4rem; margin-bottom: 8px; }
 
-        /* Navigation Bar */
-        nav {
-            background-color: #fff;
-            border-bottom: 2px solid #f5f5f5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
+/* ===============================
+   Gallery / Products / Image Cards
+   - Keep the royals .image-grid layout exactly like original royals code
+=============================== */
+.gallery, .posts, .grid {
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 16px;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+/* Homepage/shop generic grid (products / models) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-        nav ul li {
-            display: inline-block;
-        }
+/* Royals: explicit image-grid (matches original royals CSS) */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
 
-        nav ul li a {
-            display: block;
-            padding: 14px 22px;
-            color: #333;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
+/* Cards shared styles */
+.model, .product, .image-card {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.model img, .product img, .image-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  display: block;
+}
+.model:hover img, .product:hover img, .image-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
 
-        nav ul li a:hover {
-            color: #e91e63;
-            border-bottom: 3px solid #e91e63;
-        }
+/* Product card specifics */
+.product {
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--light);
+}
+.product h3 { margin: 10px 0 4px; font-size: 1.1rem; color: var(--secondary); }
+.product p { margin: 0; color: var(--primary); font-weight: 600; }
+.image-caption { margin-top: 8px; font-style: italic; color: var(--secondary); }
 
-        nav ul li a.active {
-            color: #e91e63;
-            border-bottom: 3px solid #e91e63;
-        }
+/* Royals-specific image-card styling (keeps same look as your royals page) */
+.image-card {
+  background: var(--light);
+  border: 3px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 8px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.image-card img { height: 280px; object-fit: cover; border-radius: 8px; }
 
-        /* Hero Image */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 450px;
-            background-image: url('https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-        }
+/* ===============================
+   Tables (homepage products)
+=============================== */
+table {
+  width: 90%;
+  max-width: 920px;
+  margin: 24px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+th { background: var(--light); color: var(--primary); }
+tr:hover td { background: #f0fafa; }
 
-        .hero-text {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
-            font-size: 3rem;
-            font-weight: bold;
-            background: rgba(0,0,0,0.4);
-            padding: 10px 20px;
-            border-radius: 8px;
-        }
+/* ===============================
+   Video / Media sections
+=============================== */
+.video-container, .media-section {
+  max-width: 1100px;
+  margin: 36px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 16px;
+}
+.video-grid iframe {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  background: #000;
+}
+.video-grid iframe:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px rgba(42,157,143,0.14);
+  transform: translateY(-6px);
+}
 
-        /* Content */
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
+/* ===============================
+   Contact page: background + overlay logic
+   - Applies only when the page contains .contact-panel (i.e. your contact.html)
+   - Uses :has() so no HTML changes are needed.
+   - If your browser doesn't yet support :has(), let me know and I will
+     provide a fallback (add class to <body> or add small inline CSS).
+=============================== */
 
-        .container h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #e91e63;
-        }
+/* set the background image only for pages that contain the contact panel */
+body:has(.contact-panel) {
+  background-image: url("https://mediaslide-europe.storage.googleapis.com/supa/news_pictures/2023/01/large-1673518453-924800fce68f3a7fe23fa667342148d2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
 
-        .container p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-		 /* Contact Form */
-       .contact{
-	   form {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            max-width: 500px;
-            margin: 30px auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: left;
-        }
-        label {
-            display: block;
-            margin-top: 12px;
-            font-weight: bold;
-            color: #555;
-        }
-        input, textarea {
-            background-color: #fafafa;
-            color: #333;
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 0.95em;
-            transition: border 0.3s ease;
-        }
-        input:focus, textarea:focus {
-            border-color: #e91e63;
-            outline: none;
-        }
-        button {
-            margin-top: 20px;
-            padding: 12px;
-            background-color: #e91e63;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            width: 100%;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #d81b60;
-        }
+/* dark overlay so bg never interferes with readability (contact page only) */
+body:has(.contact-panel)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48));
+  pointer-events: none;
+  z-index: 0;
+}
 
-        /* Footer */
-        footer {
-            margin-top: 50px;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-        }
-		
-    
+/* Glass panel */
+.page-wrap { max-width: 1100px; margin: 28px auto; padding: 0 16px 40px; position: relative; z-index: 2; }
+.contact-panel {
+  margin: 18px auto;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 26px;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.contact-panel label { display: block; font-weight: 600; margin-bottom: 6px; color: rgba(255,255,255,0.95); }
+.contact-panel input, .contact-panel textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+.contact-panel input:focus, .contact-panel textarea:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 6px 20px rgba(42,157,143,0.14);
+}
+.actions { display:flex; gap:12px; justify-content:flex-end; margin-top:6px; }
+.note { font-size:.9rem; color: rgba(255,255,255,0.85); text-align:left; }
+
+/* ===============================
+   Blog / Post cards
+=============================== */
+.posts {
+  max-width: 1100px;
+  margin: 18px auto 60px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.post-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.post-card:hover { transform: translateY(-8px); box-shadow: 0 16px 36px rgba(38,70,83,0.08); border-color: rgba(42,157,143,0.08); }
+.post-media img { width: 100%; height: 220px; object-fit: cover; display:block; }
+.post-body { padding: 14px 16px 18px; display:flex; flex-direction:column; gap:8px; flex:1 0 auto; }
+.post-title { font-size: 1.05rem; color: var(--secondary); font-weight:700; }
+.post-excerpt { color: #6b6b6b; font-size: .95rem; }
+
+/* ===============================
+   Buttons
+=============================== */
+.btn { background: var(--primary); color: #fff; padding: 8px 12px; border-radius: 8px; text-decoration:none; font-weight:700; }
+.btn.ghost { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+
+/* ===============================
+   Footer
+=============================== */
+footer { background: var(--primary); color: #fff; text-align: center; padding: 14px; margin-top: 28px; }
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 640px) {
+  .video-grid { flex-direction: column; align-items: center; }
+  .gallery, .posts { grid-template-columns: 1fr; }
+  .hero-text, .banner-text h2 { font-size: 1.6rem; }
+  .contact-panel { padding: 20px; }
+}
